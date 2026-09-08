@@ -18,7 +18,7 @@ history.
 
 ## Reporting a vulnerability
 
-Before the public repository is created, report vulnerabilities privately to
-the package maintainer. After replacing the repository placeholders, enable
-GitHub private vulnerability reporting and update this section with the
-preferred contact method.
+Please use the repository's
+[private vulnerability reporting](https://github.com/zianzhao68/pi-team-orchestration/security/advisories/new).
+Do not disclose credentials, exploitable details, or unpatched vulnerabilities
+in a public issue.
