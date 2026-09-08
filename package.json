@@ -1,0 +1,52 @@
+{
+  "name": "pi-team-orchestration",
+  "version": "0.1.0",
+  "description": "A Pi skill for orchestrating multiple Pi Web sessions with isolated scopes, file-based handoffs, review gates, and low-frequency callbacks.",
+  "license": "MIT",
+  "author": "Pi Team Orchestration Contributors",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-web",
+    "agent-skill",
+    "multi-agent",
+    "orchestration"
+  ],
+  "files": [
+    "skills/",
+    "CHANGELOG.md",
+    "LICENSE",
+    "PUBLISHING.zh-CN.md",
+    "README.md",
+    "SECURITY.md"
+  ],
+  "bin": {
+    "pi-team": "./skills/pi-team-orchestration/scripts/pi-team.mjs"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check:package": "node scripts/validate-package.mjs",
+    "check:publish": "node scripts/validate-package.mjs --publish",
+    "prepack": "npm run check:package && npm test",
+    "prepublishOnly": "npm run check:publish && npm test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "pi": {
+    "skills": [
+      "./skills"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zianzhao68/pi-team-orchestration.git"
+  },
+  "homepage": "https://github.com/zianzhao68/pi-team-orchestration#readme",
+  "bugs": {
+    "url": "https://github.com/zianzhao68/pi-team-orchestration/issues"
+  }
+}
