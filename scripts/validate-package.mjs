@@ -42,6 +42,12 @@ if (!packageJson.keywords?.includes("pi-package")) {
 if (!packageJson.pi?.skills?.includes("./skills")) {
   errors.push('package.json pi.skills must include "./skills"');
 }
+if (
+  packageJson.bin?.["pi-team"] !==
+  "skills/pi-team-orchestration/scripts/pi-team.mjs"
+) {
+  errors.push("package.json must declare the npm-normalized pi-team bin path");
+}
 if (!/^---\s*[\s\S]*?name:\s*pi-team-orchestration\s*$/m.test(skill)) {
   errors.push("SKILL.md must declare name: pi-team-orchestration");
 }

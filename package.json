@@ -21,7 +21,7 @@
     "SECURITY.md"
   ],
   "bin": {
-    "pi-team": "./skills/pi-team-orchestration/scripts/pi-team.mjs"
+    "pi-team": "skills/pi-team-orchestration/scripts/pi-team.mjs"
   },
   "scripts": {
     "test": "node --test tests/*.test.mjs",
